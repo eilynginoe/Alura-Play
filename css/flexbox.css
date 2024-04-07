@@ -1,0 +1,208 @@
+.cabecera__container {
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+   top: 0;
+}
+
+.cabecera__buscar__item {
+    display: none;
+}
+
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    height: 75px;
+    width: 100%;
+}
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menu__lista li {
+    align-self: center;
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+} 
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+
+/*seccion superior*/
+.superior__seccion__container{
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    overflow: scroll;
+    gap: 15px;
+}
+
+/*seccion de videos*/
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.videos__item {
+    display: block;
+    height: 65vw;
+    width: 80vw;
+    flex-grow: 1;
+}
+
+.descripcion-video{
+    display: flex;
+}
+
+.descripcion-video img {
+    margin-right: 1 rem;
+    flex-shrink: 0;
+}
+
+/*seccion de rodapie*/
+.rodapie__container {
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+
+@media (min-width: 600px) {
+    .cabecera__buscar__item {
+        display: block;
+    }
+
+    /*menu lateral en tabletas*/
+    .menu__container{
+        left: 0;
+        height: auto;
+        width: 77px;
+        top: 80px;
+    }
+
+    .menu__lista{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+        
+    }
+
+    /* seccion superior*/
+    .superior__seccion__container{
+        left: 89px;
+    }
+    
+    /* seccion de videos*/
+    .videos__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px; /* Espacio entre los videos */
+        padding-left: 92px; /* Ajustar el espacio para dejar espacio para el menú lateral */
+    }
+
+    .videos__item {
+        display: block;
+        flex-basis: calc((100% - 30px) / 2); /* Calcula el ancho de cada video considerando el espacio entre ellos*/
+        max-width: calc((100% - 30px) / 2); /*Establece el ancho máximo de cada video */
+        height: 33vw;
+    }
+
+        /* Rodapie */
+    .rodapie__container{
+        justify-content: space-between;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    
+    /*menu lateral en tabletas*/
+    .menu__container{
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;   
+    }
+
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__lista:nth-child(3){
+    flex-direction: column-reverse;
+    }
+
+    .menu__itens{
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .videojuegos{
+        order: 3;
+    }
+
+    .peliculas{
+        order: 2;
+    }
+
+    .premium {
+        order: 1;
+    }
+    
+    /*seccion superior*/
+    .superior__seccion__container{
+        left: 239px;
+    }
+
+    /*seccion de videos*/
+    .videos__container{
+        padding-left: 254px;
+    }
+
+    .videos__item {
+        display: block;
+        flex-basis: calc((100% - 30px) / 3); /* Calcula el ancho de cada video considerando el espacio entre ellos*/
+        max-width: calc((100% - 30px) / 3); /*Establece el ancho máximo de cada video */
+        /*max-width: 25%;*/
+        height: 20vw;
+    }
+
+    /*.videos__item iframe {
+        width: 20vw;
+        height: 20vw;
+    }*/
+    
+    /*rodapie*/
+    .rodapie__container{
+        padding-left: 239px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    .videos__item {
+        max-width: 19vw;
+        height: 20vw;
+    } 
+}
+
